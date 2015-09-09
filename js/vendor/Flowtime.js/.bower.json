@@ -1,0 +1,36 @@
+{
+  "name": "Flowtime.js",
+  "description": "Flowtime.js is a framework for easily building HTML presentations or websites.",
+  "main": "js/flowtime.js",
+  "keywords": [
+    "presentation",
+    "html5",
+    "css3"
+  ],
+  "homepage": "https://github.com/marcolago/flowtime.js",
+  "bugs": "https://github.com/marcolago/flowtime.js/issues",
+  "author": {
+    "name": "Marco Lago",
+    "email": "marcolago@marcolago.com",
+    "url": "http://absolide.tumblr.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/marcolago/flowtime.js.git"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "_release": "069790b9f7",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "069790b9f73bb3652d1b3d9b526b12a2a3e5f938"
+  },
+  "_source": "https://github.com/marcolago/flowtime.js.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/marcolago/flowtime.js.git",
+  "_direct": true
+}
