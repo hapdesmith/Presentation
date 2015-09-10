@@ -39,15 +39,97 @@ html
 									img(src="img/sample-2.png")
 					.ft-page
 						.title-page Javascript : jQuery​
+						.content.ft-fragment
+							| jQuery is the most popular JavaScript library designed to simplify the client-side scripting of HTML
 					.ft-page
 						.title-page Javascript : Why use jQuery?​
+						.content
+							ul
+								li.ft-fragment Faster development.
+								li.ft-fragment Library dependencies (lots of Javascript Libraries rely on jQuery)​
+
+							p.ft-fragment Example (Pure Javascript) :
+							pre.ft-fragment
+								code.language-javascript
+									| var el = document.querySelector('.bye');​
+									| el.style.background = "red";​
+									| el.style.color = "white";​
+							p.ft-fragment Example (jQuery) :
+							pre.ft-fragment
+								code.language-javascript
+									| var el = $('.bye');​
+									| el.css( { 'background' : 'red' , 'color' : 'white' } );
 
 				// common usage
 				.ft-section
-					.ft-page section1/page1
-					.ft-page section1/page2
-					.ft-page section1/page2
-					.ft-page section1/page1
-					.ft-page section1/page2
+					.ft-page
+						.title-page Javascript : Common Usage
+						.content
+							.ft-fragment
+								p (Example) insert sript to your html :
+								pre.ft-fragment
+									code.language-javascript= '<script type="text/javascript" src="js/main.js"></script>​'
+							.ft-fragment
+								p Common usage of jQuery :
+								pre.ft-fragment
+									code.language-javascript
+										| $(document).ready( function() {
+										| 
+										| 	alert("this is inline Javascript");​
+										| 
+										| });​
+					.ft-page
+						.title-page Javascript : Common Usage
+						.content
+							p.ft-fragment What is the difference between $(window).load() and $(document).ready() ?​
+							p.ft-fragment How to declare a variable :
+							pre.ft-fragment
+								code.language-javascript
+									| // Cara pertama
+									| function() { ​
+									| 	var a = "New Variable";​
+									| 	return a;​
+									| }​
+									| // Cara kedua
+									| function() {​
+									| 	a = "New Variable";​
+									| 	return a;​
+									| }
+					.ft-page.overflow
+						.title-page Javascript : Common Usage
+						.content
+							p.ft-fragment (Example) Select some html elements
+							pre.ft-fragment
+								code.language-markup
+									| &lt;ul&gt;
+									| 	&lt;li class="link-element"&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;​
+									|	&lt;li class="link-element"&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;​
+									|	&lt;li class="not-link-element"&gt;&lt;a href="#"&gt;Blink&lt;/a&gt;&lt;/li&gt;​
+							pre.ft-fragment
+								code.language-javascript
+									| $('ul li.link-element').each( function() {​
+									|	$(this).child().attr('href','http://google.com');​
+									| });​
+							p.ft-fragment Result :
+							pre.ft-fragment
+								code.language-markup
+									| &lt;ul&gt;
+									| 	&lt;li class="link-element"&gt;&lt;a href="http://google.com"&gt;Link&lt;/a&gt;&lt;/li&gt;​
+									|	&lt;li class="link-element"&gt;&lt;a href="http://google.com"&gt;Link&lt;/a&gt;&lt;/li&gt;​
+									|	&lt;li class="not-link-element"&gt;&lt;a href="#"&gt;Blink&lt;/a&gt;&lt;/li&gt;​
+					.ft-page
+						.title-page Javascript : Common Usage
+						.content
+							p.ft-fragment Check if element exist
+							pre.ft-fragment
+								code.language-javascript
+									| // Cara pertama
+									| if ( $('.slider').length !== 0 ) {​
+									| 	// insert slider code here ​
+									| }
+									| // Cara alternatif
+									|  if ( $('#justanotherdiv').is(':visible') {​
+									| 	// insert code here​
+									| }​
 		// footer
 		include ./includes/script.jade

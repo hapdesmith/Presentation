@@ -56,18 +56,93 @@
           </div>
           <div class="ft-page">
             <div class="title-page">Javascript : jQuery​</div>
+            <div class="content ft-fragment">jQuery is the most popular JavaScript library designed to simplify the client-side scripting of HTML</div>
           </div>
           <div class="ft-page">
             <div class="title-page">Javascript : Why use jQuery?​</div>
+            <div class="content">
+              <ul>
+                <li class="ft-fragment">Faster development.</li>
+                <li class="ft-fragment">Library dependencies (lots of Javascript Libraries rely on jQuery)​</li>
+              </ul>
+              <p class="ft-fragment">Example (Pure Javascript) :</p>
+              <pre class="ft-fragment"><code class="language-javascript">var el = document.querySelector('.bye');​
+el.style.background = "red";​
+el.style.color = "white";​</code></pre>
+              <p class="ft-fragment">Example (jQuery) :</p>
+              <pre class="ft-fragment"><code class="language-javascript">var el = $('.bye');​
+el.css( { 'background' : 'red' , 'color' : 'white' } );</code></pre>
+            </div>
           </div>
         </div>
         <!-- common usage-->
         <div class="ft-section">
-          <div class="ft-page">section1/page1</div>
-          <div class="ft-page">section1/page2</div>
-          <div class="ft-page">section1/page2</div>
-          <div class="ft-page">section1/page1</div>
-          <div class="ft-page">section1/page2</div>
+          <div class="ft-page">
+            <div class="title-page">Javascript : Common Usage</div>
+            <div class="content">
+              <div class="ft-fragment">
+                <p>(Example) insert sript to your html :</p>
+                <pre class="ft-fragment"><code class="language-javascript">&lt;script type=&quot;text/javascript&quot; src=&quot;js/main.js&quot;&gt;&lt;/script&gt;​</code></pre>
+              </div>
+              <div class="ft-fragment">
+                <p>Common usage of jQuery :</p>
+                <pre class="ft-fragment"><code class="language-javascript">$(document).ready( function() {
+ 
+	alert("this is inline Javascript");​
+ 
+});​</code></pre>
+              </div>
+            </div>
+          </div>
+          <div class="ft-page">
+            <div class="title-page">Javascript : Common Usage</div>
+            <div class="content">
+              <p class="ft-fragment">What is the difference between $(window).load() and $(document).ready() ?​</p>
+              <p class="ft-fragment">How to declare a variable :</p>
+              <pre class="ft-fragment"><code class="language-javascript">// Cara pertama
+function() { ​
+	var a = "New Variable";​
+	return a;​
+}​
+// Cara kedua
+function() {​
+	a = "New Variable";​
+	return a;​
+}</code></pre>
+            </div>
+          </div>
+          <div class="ft-page overflow">
+            <div class="title-page">Javascript : Common Usage</div>
+            <div class="content">
+              <p class="ft-fragment">(Example) Select some html elements</p>
+              <pre class="ft-fragment"><code class="language-markup">&lt;ul&gt;
+	&lt;li class="link-element"&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;​
+	&lt;li class="link-element"&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;​
+	&lt;li class="not-link-element"&gt;&lt;a href="#"&gt;Blink&lt;/a&gt;&lt;/li&gt;​</code></pre>
+              <pre class="ft-fragment"><code class="language-javascript">$('ul li.link-element').each( function() {​
+	$(this).child().attr('href','http://google.com');​
+});​</code></pre>
+              <p class="ft-fragment">Result :</p>
+              <pre class="ft-fragment"><code class="language-markup">&lt;ul&gt;
+	&lt;li class="link-element"&gt;&lt;a href="http://google.com"&gt;Link&lt;/a&gt;&lt;/li&gt;​
+	&lt;li class="link-element"&gt;&lt;a href="http://google.com"&gt;Link&lt;/a&gt;&lt;/li&gt;​
+	&lt;li class="not-link-element"&gt;&lt;a href="#"&gt;Blink&lt;/a&gt;&lt;/li&gt;​</code></pre>
+            </div>
+          </div>
+          <div class="ft-page">
+            <div class="title-page">Javascript : Common Usage</div>
+            <div class="content">
+              <p class="ft-fragment">Check if element exist</p>
+              <pre class="ft-fragment"><code class="language-javascript">// Cara pertama
+if ( $('.slider').length !== 0 ) {​
+	// insert slider code here ​
+}
+// Cara alternatif
+ if ( $('#justanotherdiv').is(':visible') {​
+	// insert code here​
+}​</code></pre>
+            </div>
+          </div>
         </div>
       </div>
     </div>

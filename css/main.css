@@ -61,6 +61,9 @@ body .flowtime .ft-section .ft-page .content:after {
 body .flowtime .ft-section .ft-page .content:after {
   clear: both;
 }
+body .flowtime .ft-section .ft-page .content p {
+  margin: 1% 0;
+}
 body .flowtime .ft-section .ft-page .content .clm-2 {
   width: 50%;
   padding: 2%;
@@ -68,4 +71,7 @@ body .flowtime .ft-section .ft-page .content .clm-2 {
 }
 body .flowtime .ft-section .ft-page .content .clm-2 img {
   width: 100%;
+}
+body .flowtime .ft-section .ft-page.overflow {
+  overflow-y: auto;
 }
