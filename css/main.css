@@ -62,7 +62,14 @@ body .flowtime .ft-section .ft-page .content:after {
   clear: both;
 }
 body .flowtime .ft-section .ft-page .content p {
-  margin: 1% 0;
+  margin: .3vh 0;
+  font-size: 2vw;
+  line-height: 1.5;
+}
+body .flowtime .ft-section .ft-page .content ul li {
+  font-size: 2vw;
+  padding-left: 1vw;
+  margin-bottom: 2vw;
 }
 body .flowtime .ft-section .ft-page .content .clm-2 {
   width: 50%;
@@ -74,4 +81,10 @@ body .flowtime .ft-section .ft-page .content .clm-2 img {
 }
 body .flowtime .ft-section .ft-page.overflow {
   overflow-y: auto;
+}
+body .ft-page-thumb {
+  width: 2vw;
+  height: 2vh;
+  margin-right: .2vw;
+  margin-bottom: .3vh;
 }
