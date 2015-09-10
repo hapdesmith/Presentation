@@ -131,5 +131,157 @@ html
 									|  if ( $('#justanotherdiv').is(':visible') {​
 									| 	// insert code here​
 									| }​
+				// quiz
+				.ft-section
+					.ft-page 
+						.title-page Javascript : Quiz (1)  "Scope"
+						.content
+							pre
+								code.language-javascript
+									| var a = "satu";​
+									| alert(a);​
+									| &nbsp
+									| function alertFunction() {​
+									|     alert(a);​
+									|     var a = "dua";​
+									|     alert(a);​
+									| }​
+									| &nbsp
+									| alertFunction();
+					.ft-page
+						.title-page Javascript : Quiz (1)  "Scope"
+						.content
+							pre
+								code.language-javascript
+									| var a = "satu";​
+									| alert(a);​           // "satu"
+									| &nbsp
+									| function alertFunction() {​
+									|     var a;
+									|     alert(a);​       // "undefined"
+									|     a = "dua";​
+									|     alert(a);​       // "dua"
+									| }​
+									| &nbsp
+									| alertFunction();
+					.ft-page
+						.title-page Javascript : Quiz (2)  "Chain Command"
+						.content
+							pre
+								code.language-javascript
+									| var angka = "satu dua tiga";
+									| &nbsp
+									| angka.split(' ').reverse().join(' ');
+									| &nbsp
+									| ​console.log(angka);
+					.ft-page
+						.title-page Javascript : Quiz (2)  "Chain Command"
+						.content
+							pre
+								code.language-javascript
+									| var angka = "satu dua tiga";
+									| &nbsp
+									| angka.split(' ');      // angka = ["satu","dua","tiga"]
+									| angka.reverse();       // angka = ["tiga", "dua", "satu"]
+									| angka.join(' ');       // angka = "tiga dua satu" 
+									| &nbsp
+									| ​console.log(angka);
+					.ft-page
+						.title-page Javascript : Quiz (3)  "Selection"
+						.content
+							table(style="border-collapse:separate;border-spacing:10px")
+								tr
+									td
+										pre.language-markup
+											code.language-markup.
+												&lt;ul id="one" class="level-1">
+												    &lt;li class="item-i">I&lt;/li>
+												    &lt;li id="ii" class="item-ii">II&lt;/li> 
+												    &lt;ul class="level-2"> 
+												        &lt;li class="item-a">A&lt;/li> 
+												        &lt;li class="item-b">B&lt;/li> 
+												            ​&lt;ul class="level-3">
+												                &lt;li class="item-1">1&lt;/li> 
+												            &lt;/ul>
+												        &lt;/li>
+												        &lt;li class="item-c">C&lt;/li> 
+												    &lt;/ul>
+												&lt;/li> 
+												&lt;li class="item-iii">III&lt;/li> 
+												&lt;/ul>
+									td
+										pre
+											code.language-javascript
+												| $( "li.item-a" )
+												| .closest( "ul" )
+												| .css( "background-​color", "red" );​
+												| &nbsp
+												| $( "li.item-a" )
+												| .closest( "li" )
+												| .css( "background-​color", "red" );​
+										p(style="padding-left:10px").ft-fragment .closest() Description: For each element in the set, get the first element that matches the selector by testing the element itself and traversing up through its ancestors in the DOM tree.​
+					.ft-page
+						.title-page Javascript : Quiz (3)  "Selection"
+						.content
+							table(style="border-collapse:separate;border-spacing:10px")
+								tr
+									td
+										pre.language-markup
+											code.language-markup.
+												&lt;ul id="one" class="level-1">
+												    &lt;li class="item-i">I&lt;/li> 
+												    &lt;li id="ii" class="item-ii">II&lt;/li> 
+												    &lt;ul class="level-2">  // THIS!
+												        &lt;li class="item-a">A&lt;/li> 
+												        &lt;li class="item-b">B&lt;/li> 
+												            ​&lt;ul class="level-3">
+												                &lt;li class="item-1">1&lt;/li> 
+												            &lt;/ul>
+												        &lt;/li>
+												        &lt;li class="item-c">C&lt;/li> 
+												    &lt;/ul>
+												&lt;/li> 
+												&lt;li class="item-iii">III&lt;/li> 
+												&lt;/ul>
+									td
+										pre
+											code.language-javascript
+												| $( "li.item-a" )
+												| .closest( "ul" )
+												| .css( "background-​color", "red" );​
+					.ft-page
+						.title-page Javascript : Quiz (3)  "Selection"
+						.content
+							table(style="border-collapse:separate;border-spacing:10px")
+								tr
+									td
+										pre.language-markup
+											code.language-markup.
+												&lt;ul id="one" class="level-1">
+												    &lt;li class="item-i">I&lt;/li> 
+												    &lt;li id="ii" class="item-ii">II&lt;/li>  
+												    &lt;ul class="level-2"> 
+												        &lt;li class="item-a">A&lt;/li>  // THIS!
+												        &lt;li class="item-b">B&lt;/li>  
+												            ​&lt;ul class="level-3">
+												                &lt;li class="item-1">1&lt;/li> 
+												            &lt;/ul>
+												        &lt;/li>
+												        &lt;li class="item-c">C&lt;/li> 
+												    &lt;/ul>
+												&lt;/li> 
+												&lt;li class="item-iii">III&lt;/li> 
+												&lt;/ul>
+									td
+										pre
+											code.language-javascript
+												| $( "li.item-a" )
+												| .closest( "li" )
+												| .css( "background-​color", "red" );​
+				.ft-section
+					.ft-page
+						video(autoplay loop).video-bg
+							source(src="img/video.mp4",type="video/mp4")
+						.title-hero alert("Thank You");
 		// footer
 		include ./includes/script.jade
