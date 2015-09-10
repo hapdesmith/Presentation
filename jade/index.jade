@@ -1,5 +1,5 @@
 //- index.jade
-- var title = "Supreme Court Singapore"
+- var title = "FrontEnd Presentation"
 - var page = "home"
 
 doctype html
@@ -10,286 +10,44 @@ html
 
 	// body
 	body
-		
-		// header
-		include ./includes/header.jade
 
-		// nav
-		include ./includes/navigation.jade
-		
 		// main
 		div(role="main")
+			.flowtime
+				// introduction
+				.ft-section
+					.ft-page
+						video(autoplay loop).video-bg
+							source(src="img/video.mp4",type="video/mp4")
+						.title-hero Javascript in Xtremax
+						.title-person by FrontEnd Team
+					.ft-page
+						.title-page Javascript : Definition 
+						.content.ft-fragment
+							| JavaScript® (often shortened to JS) is a lightweight, interpreted, object-oriented language with first-class functions, most known as the scripting language for Web pages.​
+					.ft-page
+						.title-page Javascript : Usage in Front End Development​
+						.content
+							ul
+								li.ft-fragment DOM Manipulation, Adding user interactivity to web pages.​
+								li.ft-fragment Dropdown, Slider/Carousel, Parallax, AJAX, you name it.
+							p.ft-fragment Sample :
+							.ft-fragment
+								.clm-2
+									img(src="img/sample-1.png")
+								.clm-2
+									img(src="img/sample-2.png")
+					.ft-page
+						.title-page Javascript : jQuery​
+					.ft-page
+						.title-page Javascript : Why use jQuery?​
 
-			// banner
-			section.banner
-				
-				.container
-
-					// wrap
-					.wrap
-
-						// left
-						.left
-							
-							// sitefinity
-							.sfcontentblock
-
-								// latest
-								.latestjudgment
-
-									// carousel
-									.carousel
-
-										// item
-										.item
-											a( href="#" title="#")
-
-												// label
-												span.type LATEST JUDGMENT
-
-												// title
-												h1.title  Yong Vui Kong v Public Prosecutor
-
-												// descriptionm
-												.description
-													| Criminal Law, Misuse of Drugs Act, Consitutional Law, Fundamental...
-
-										// item
-										.item
-											a( href="#" title="#")
-
-												// label
-												span.type LATEST JUDGMENT
-
-												// title
-												h1.title  Lorem ipsum vs Dolor sity amet
-
-												// descriptionm
-												.description
-													| Criminal Law, Misuse of Drugs Act, Consitutional Law, Fundamental...
-
-							// wrap
-							.wrap
-
-								// left
-								.left
-
-									// sitefinity
-									.sfcontentblock
-										.block( style="background-image: url( 'img/content/bg-block-final.png' );" )
-
-								// right
-								.right
-
-									// sitefinity
-									.sfcontentblock
-										.visitorguide( style="background: url( 'img/content/bg-visitorguide-final.png' );" )
-											a( href="visitors.html" title="#" )
-
-												// img
-												img.labelimage( src="img/content/img-visitorguide-final.png" alt="#" )
-
-												// go button
-												span.goto
-													| VISITOR GUIDE
-													img( src="img/ic-arrow-right-small.png" alt="Visitor Guide" )
-						
-						// right
-						.right
-
-							// hearings
-							.hearings
-
-								// sitefinity
-								div
-
-									// icon label
-									.iconlabel
-										a( href="hearinglist.html" title="#" )
-											img( src="img/ic-briefcasesearch.png" alt="search" )
-											.text 
-												| FIND 
-												br 
-												| HEARINGS
-
-									// search hearings
-									.searchhearing
-										input.searchbox( type="text" placeholder="Enter details of Hearings here" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Please enter <ul><li>Party Name or</li> <li>Case Number eg. BC 252/2014 or </li><li>Lawyer Name or </li> <li>Company Name or </li><li>Judges Name or</li> <li>Hearing Type.</li>")
-										button.searchbutton
-											| Go
-										a.viewall( href="hearinglist.html" title="#" )
-											| VIEW ALL HEARINGS
-
-
-							// wrap
-							.wrap
-
-								// left
-								.left
-
-									// sitefinity
-									.sfcontentblock
-
-										// updates
-										.updates
-
-											// carousel
-											.carousel
-
-												// item
-												.item
-													a( href="#" title="#")
-
-														// label
-														span.type UPDATES FOR LEGAL PROFESSIONALS
-
-														// title
-														h1.title  Applications for Practising Certificate for Practice Year 2015/2016
-
-														// descriptionm
-														.description
-															| A lawyer who wishes to apply for a PC is to submit the application through the lawyer’s personal eLitigation account. 
-
-												// item
-												.item
-													a( href="#" title="#")
-
-														// label
-														span.type UPDATES FOR LEGAL PROFESSIONALS
-
-														// title
-														h1.title  Applications for Practising Certificate for Practice Year 2015/2016
-
-														// descriptionm
-														.description
-															| A lawyer who wishes to apply for a PC is to submit the application through the lawyer’s personal eLitigation account. 
-
-												// item
-												.item
-													a( href="#" title="#")
-
-														// label
-														span.type UPDATES FOR LEGAL PROFESSIONALS
-
-														// title
-														h1.title  Applications for Practising Certificate for Practice Year 2015/2016
-
-														// descriptionm
-														.description
-															| A lawyer who wishes to apply for a PC is to submit the application through the lawyer’s personal eLitigation account. 
-
-								// right
-								.right
-
-									// sitefinity
-									.sfcontentblock
-
-										// block
-										.block( style="background-image: url( 'img/content/bg-block-2-final.png' );" )
-									
-									// sitefinity
-									.sfcontentblock
-										// our judge
-										.ourjudge
-											a( href="justices.html" title="#" )
-
-												// img
-												img.judge( src="img/content/img-ourjudge-final.png" alt="judge" )
-
-												// goto
-												span.goto
-													| OUR 
-													br
-													| JUDGES
-													img( src="img/ic-arrow-right-small.png" alt="Visitor Guide" )
-
-						// left decor
-						.decor.leftside
-							div.sfContentBlock
-								div.decorimg( style="background-image: url( 'img/content/bg-decor-left-final.png' );" )
-
-						// right decor
-						.decor.rightside
-							div.sfContentBlock
-								div.decorimg( style="background-image: url( 'img/content/bg-decor-right-final.png' );" )
-
-			
-			// infobar
-			section.infobar
-				.container
-
-					// wrap
-					.wrap
-
-						// left
-						.left
-
-							div
-
-								// wrap
-								ul.tiles
-									li
-										span.title 
-											| INFO 
-											br 
-											| FOR
-									li
-										a( href="lawyers.html" title="#" )
-											img( src="img/ic-tie.png" alt="LAWYERS" )
-											span.label LAWYERS
-									li
-										a( href="litigants.html" title="#" )
-											img( src="img/ic-tag.png" alt="LITIGANTS" )
-											span.label LITIGANTS
-									li
-										a( href="mediareleases.html" title="#" )
-											img( src="img/ic-news.png" alt="MEDIA" )
-											span.label MEDIA
-									li
-										a( href="visitors.html" title="#" )
-											img( src="img/ic-camera.png" alt="VISITORS" )
-											span.label VISITORS
-									li
-										a( href="students.html" title="#" )
-											img( src="img/ic-apple.png" alt="STUDENTS" )
-											span.label STUDENTS
-
-						// right
-						.right
-							
-							div
-
-								// wrap
-								ul.tiles
-									li
-										span.title 
-											| QUICK LINKS
-									li
-										a( href="judgments.html" title="#" )
-											img( src="img/ic-courtjudgment.png" alt="LAWYERS" )
-											span.label COURT JUDGMENTS
-									li
-										a( href="practicedirection.html" title="#" )
-											img( src="img/ic-practicedirection.png" alt="LITIGANTS" )
-											span.label PRACTICE DIRECTIONS
-									li
-										a( href="formandfees.html" title="#" )
-											img( src="img/ic-forms.png" alt="MEDIA" )
-											span.label FORMS AND FEES
-									li
-										a( href="selfhelp.html" title="#" )
-											img( src="img/ic-selfhelp.png" alt="VISITORS" )
-											span.label SELF-HELP GUIDES
-									li
-										a( href="legalhelp.html" title="#" )
-											img( src="img/ic-legalhelp.png" alt="STUDENTS" )
-											span.label LEGAL HELP
-
-
-
-
-		// footer
-		include ./includes/footer.jade
-
+				// common usage
+				.ft-section
+					.ft-page section1/page1
+					.ft-page section1/page2
+					.ft-page section1/page2
+					.ft-page section1/page1
+					.ft-page section1/page2
 		// footer
 		include ./includes/script.jade
