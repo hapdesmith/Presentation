@@ -69,6 +69,168 @@
           <div class="ft-page">section1/page1</div>
           <div class="ft-page">section1/page2</div>
         </div>
+        <!-- quiz-->
+        <div class="ft-section">
+          <div class="ft-page"> 
+            <div class="title-page">Javascript : Quiz (1)  "Scope"</div>
+            <div class="content">
+              <pre><code class="language-javascript">var a = "satu";​
+alert(a);​
+&nbsp
+function alertFunction() {​
+    alert(a);​
+    var a = "dua";​
+    alert(a);​
+}​
+&nbsp
+alertFunction();</code></pre>
+            </div>
+          </div>
+          <div class="ft-page">
+            <div class="title-page">Javascript : Quiz (1)  "Scope"</div>
+            <div class="content">
+              <pre><code class="language-javascript">var a = "satu";​
+alert(a);​           // "satu"
+&nbsp
+function alertFunction() {​
+    var a;
+    alert(a);​       // "undefined"
+    a = "dua";​
+    alert(a);​       // "dua"
+}​
+&nbsp
+alertFunction();</code></pre>
+            </div>
+          </div>
+          <div class="ft-page">
+            <div class="title-page">Javascript : Quiz (2)  "Chain Command"</div>
+            <div class="content">
+              <pre><code class="language-javascript">var angka = "satu dua tiga";
+&nbsp
+angka.split(' ').reverse().join(' ');
+&nbsp
+​console.log(angka);</code></pre>
+            </div>
+          </div>
+          <div class="ft-page">
+            <div class="title-page">Javascript : Quiz (2)  "Chain Command"</div>
+            <div class="content">
+              <pre><code class="language-javascript">var angka = "satu dua tiga";
+&nbsp
+angka.split(' ');      // angka = ["satu","dua","tiga"]
+angka.reverse();       // angka = ["tiga", "dua", "satu"]
+angka.join(' ');       // angka = "tiga dua satu" 
+&nbsp
+​console.log(angka);</code></pre>
+            </div>
+          </div>
+          <div class="ft-page">
+            <div class="title-page">Javascript : Quiz (3)  "Selection"</div>
+            <div class="content">
+              <table style="border-collapse:separate;border-spacing:10px">
+                <tr>
+                  <td>
+                    <pre class="language-markup"><code class="language-markup">&lt;ul id="one" class="level-1">
+    &lt;li class="item-i">I</li> 
+    &lt;li id="ii" class="item-ii">II 
+    &lt;ul class="level-2"> 
+        &lt;li class="item-a">A</li> 
+        &lt;li class="item-b">B 
+            ​&lt;ul class="level-3">
+                &lt;li class="item-1">1</li>  ​
+            &lt;/ul>
+        &lt;/li>
+        &lt;li class="item-c">C</li>
+    &lt;/ul>
+&lt;/li> 
+&lt;li class="item-iii">III</li> 
+&lt;/ul></code></pre>
+                  </td>
+                  <td>
+                    <pre><code class="language-javascript">$( "li.item-a" )
+.closest( "ul" )
+.css( "background-​color", "red" );​
+&nbsp
+$( "li.item-a" )
+.closest( "li" )
+.css( "background-​color", "red" );​</code></pre>
+                    <p style="padding-left:10px" class="ft-fragment">.closest() Description: For each element in the set, get the first element that matches the selector by testing the element itself and traversing up through its ancestors in the DOM tree.​</p>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="ft-page">
+            <div class="title-page">Javascript : Quiz (3)  "Selection"</div>
+            <div class="content">
+              <table style="border-collapse:separate;border-spacing:10px">
+                <tr>
+                  <td>
+                    <pre class="language-markup"><code class="language-markup">&lt;ul id="one" class="level-1">
+    &lt;li class="item-i">I</li> 
+    &lt;li id="ii" class="item-ii">II 
+    &lt;ul class="level-2">  // this
+        &lt;li class="item-a">A</li> 
+        &lt;li class="item-b">B 
+            ​&lt;ul class="level-3">
+                &lt;li class="item-1">1</li>  ​
+            &lt;/ul>
+        &lt;/li>
+        &lt;li class="item-c">C</li>
+    &lt;/ul>
+&lt;/li> 
+&lt;li class="item-iii">III</li> 
+&lt;/ul></code></pre>
+                  </td>
+                  <td>
+                    <pre><code class="language-javascript">$( "li.item-a" )
+.closest( "ul" )
+.css( "background-​color", "red" );​</code></pre>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="ft-page">
+            <div class="title-page">Javascript : Quiz (3)  "Selection"</div>
+            <div class="content">
+              <table style="border-collapse:separate;border-spacing:10px">
+                <tr>
+                  <td>
+                    <pre class="language-markup"><code class="language-markup">&lt;ul id="one" class="level-1">
+    &lt;li class="item-i">I</li> 
+    &lt;li id="ii" class="item-ii">II 
+    &lt;ul class="level-2"> 
+        &lt;li class="item-a">A</li> // this
+        &lt;li class="item-b">B 
+            ​&lt;ul class="level-3">
+                &lt;li class="item-1">1</li>  ​
+            &lt;/ul>
+        &lt;/li>
+        &lt;li class="item-c">C</li>
+    &lt;/ul>
+&lt;/li> 
+&lt;li class="item-iii">III</li> 
+&lt;/ul></code></pre>
+                  </td>
+                  <td>
+                    <pre><code class="language-javascript">$( "li.item-a" )
+.closest( "li" )
+.css( "background-​color", "red" );​</code></pre>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="ft-section">
+          <div class="ft-page">
+            <video autoplay loop class="video-bg">
+              <source src="img/video.mp4" type="video/mp4">
+            </video>
+            <div class="title-hero">alert("Thank You");</div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- footer-->
